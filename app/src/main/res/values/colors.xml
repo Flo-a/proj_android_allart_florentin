@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey_light">#DCDCDC</color>
     <color name="gris_bleu">#57606C</color>
-    <color name="fond_item_recycler">#FFFFFFFF</color>
+    <color name="fond_item_recycler">#F2F2F2</color>
     <color name="texte_item_recycler">#FF000000</color>
     <color name="fond_recycler">#F3F3F3</color>
+    <color name="couleur_bordure_item">#F2F2F2</color>
 </resources>
