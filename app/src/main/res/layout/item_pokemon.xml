@@ -10,7 +10,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/imageCardview"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:elevation="10dp"
@@ -20,12 +20,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/itemRecyclerViewURLImage"
+            android:id="@+id/pokemonImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             />
     </androidx.cardview.widget.CardView>
 
@@ -40,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/itemRecyclerViewNom"
+            android:id="@+id/pokemonNom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/texte_item_recycler"
@@ -50,24 +49,16 @@
             tools:text="@tools:sample/cities" />
 
         <TextView
-            android:id="@+id/itemRecyclerViewMarque"
+            android:id="@+id/numPokedex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey_light"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/itemRecyclerViewNom"
-            tools:text="@tools:sample/full_names" />
+            app:layout_constraintTop_toBottomOf="@id/pokemonNom"
+            tools:text="@tools:sample/full_names"/>
 
 
     </LinearLayout>
 
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_favorite_border_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

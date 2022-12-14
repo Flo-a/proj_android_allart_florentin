@@ -11,4 +11,5 @@
     <color name="fond_item_recycler">#57606C</color>
     <color name="texte_item_recycler">#FFFFFFFF</color>
     <color name="fond_recycler">#000000</color>
+    <color name="couleur_bordure_item">#3D4752</color>
 </resources>

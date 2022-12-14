@@ -1,12 +1,11 @@
-package fr.com.example.proj_allart_florentin.view
+package fr.com.example.proj_allart_florentin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import fr.com.example.proj_allart_florentin.databinding.ActivityMainBinding
-import fr.com.example.proj_allart_florentin.databinding.ActivityRecyclerViewBinding
+import fr.com.example.proj_allart_florentin.pokemon.view.PokemonActivity
+import fr.com.example.proj_allart_florentin.telephone.view.RecyclerViewActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,12 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.mainButtonRecyclerView.setOnClickListener { goToRecyclerView() }
-
+        binding.buttonPokemon.setOnClickListener { goToPokemon() }
     }
-
 
 
     private fun goToRecyclerView() {
         startActivity(Intent(this, RecyclerViewActivity::class.java))
+    }
+
+    private fun goToPokemon() {
+        startActivity(Intent(this, PokemonActivity::class.java))
     }
 }

@@ -1,4 +1,4 @@
-package fr.com.example.proj_allart_florentin.view
+package fr.com.example.proj_allart_florentin.telephone.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,14 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import fr.com.example.proj_allart_florentin.R
 
 import fr.com.example.proj_allart_florentin.databinding.FooterMarqueBinding
 import fr.com.example.proj_allart_florentin.databinding.HeaderMarqueBinding
 import fr.com.example.proj_allart_florentin.databinding.ItemCustomRecyclerBinding
-import fr.com.example.proj_allart_florentin.model.TelephoneDataFooterSample
-import fr.com.example.proj_allart_florentin.model.MyTelephoneForRecyclerView
-import fr.com.example.proj_allart_florentin.model.TelephoneDataHeaderSample
-import fr.com.example.proj_allart_florentin.model.TelephoneDataSample
+import fr.com.example.proj_allart_florentin.telephone.model.TelephoneDataFooterSample
+import fr.com.example.proj_allart_florentin.telephone.model.MyTelephoneForRecyclerView
+import fr.com.example.proj_allart_florentin.telephone.model.TelephoneDataHeaderSample
+import fr.com.example.proj_allart_florentin.telephone.model.TelephoneDataSample
 
 private val diffItemUtils = object : DiffUtil.ItemCallback<MyTelephoneForRecyclerView>() {
 
@@ -79,7 +81,12 @@ class TelephoneAdapter(
         fun bind(TelephoneDataSample: TelephoneDataSample) {
             ui = TelephoneDataSample
             binding.itemRecyclerViewNom.text = TelephoneDataSample.nom
-            binding.itemRecyclerViewMarque.text = "${TelephoneDataSample.marque}"
+            binding.itemRecyclerViewMarque.text = TelephoneDataSample.marque
+            Glide.with(itemView.context)
+                .load(TelephoneDataSample.img)
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(binding.itemRecyclerViewURLImage)
+
         }
     }
 
@@ -99,6 +106,8 @@ class TelephoneAdapter(
         }
 
     }
+
+
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
